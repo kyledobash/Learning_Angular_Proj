@@ -2,9 +2,16 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template: '<h1>Hey guys!</h1>',
+  template: `
+  <h1>Hey guys!</h1>
+  <p>{{myObject.location}}</p>
+  `,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  myObject = {
+    gender: 'male',
+    age: 26,
+    location: 'USA'
+  }
 }
