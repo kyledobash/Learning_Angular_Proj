@@ -5,15 +5,14 @@ import { Component } from '@angular/core';
   template: `
   <h1>Hey guys!</h1>
 
-    <div *ngIf="myArr; then tmpl1 else tmpl2"></div>
+  <img src="{{angularLogo}}">
+  <img [src]="angularLogo">
+  <img bind-src="angularLogo">
 
-  <ng-template #tmpl1>Truth</ng-template>
-  <ng-template #tmpl2>False</ng-template>
   `,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
 
-  myArr = false;
-
+  angularLogo = 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fc%2Fcf%2FAngular_full_color_logo.svg%2F1200px-Angular_full_color_logo.svg.png&f=1&nofb=1';
 }
